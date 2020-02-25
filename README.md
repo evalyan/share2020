@@ -245,7 +245,7 @@ When using OpenShift there are a number of different ways you can add an applica
 
    From the name of the repo, the Application Name and deployment Name fields will be automatically populated. The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route. The Application Name field is used to group multiple deployments together under the same name as part of one overall application.
 
-At the bottom of this page you will see that the checkbox for creating a route to the application is selected. This indicates that the application will be automatically given a public URL for accessing it.
+   At the bottom of this page you will see that the checkbox for creating a route to the application is selected. This indicates that the application will be automatically given a public URL for accessing it.
 
 9. Click on **Create**.
 
