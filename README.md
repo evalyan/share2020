@@ -99,7 +99,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	
 6. Modify the *banking-app-xx/public/js/bankingAPI.js* file. You can use notepad, for example.
 
-	![alt text](images/client_id_secret.png "javascript code")
+	<kbd>![alt text](images/client_id_secret.png "javascript code")</kbd>
 	
 	* Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
 	* Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
