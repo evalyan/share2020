@@ -55,17 +55,21 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    
    `ls (or dir for Windows)`
    
-   * **app.js**: Application server code
-   * **public/index.html**: Application client code (banking dashboard)
-   * **public/css**: Application stylesheet
-   * **public/js**: JavaScript libraries 
-   * **public/js/bankingAPI.js** Source code that connects to a core banking system through API calls. You will modify this file later. 
-   * **package.json**: Package dependencies file
-   * **Dockerfile**: File to build the Docker image 
+   * **app.js** - Application server code
+   * **public/index.html** - Application client code (banking dashboard)
+   * **public/css** - Application stylesheet
+   * **public/js** - JavaScript libraries 
+   * **public/js/bankingAPI.js** - Source code that connects to a core banking system through API calls. You will modify this file later. 
+   * **package.json** - Package dependencies file
+   * **Dockerfile** - File to build the Docker image 
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
-1. Go to the [API Developer Portal].
+1. Start a web browser.
+
+2. Go to the API Developer Portal, https://developer-contest-spbodieusibmcom-prod.developer.us.apiconnect.ibmcloud.com/
+
+
 
 2. Login to your account.
 
