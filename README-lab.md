@@ -37,7 +37,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 * [IBM LinuxONE](https://www.ibm.com/it-infrastructure/LinuxONE)
 * [IBM Z Mainframe](https://www.ibm.com/it-infrastructure/z)
 
-# Step 1 - Discover and locally run the banking application
+# Step 1 - Discover and run the banking application locally
 
 ## Part 1 - Discover the banking application
 
