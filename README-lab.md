@@ -88,7 +88,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	* For Title: use zcloudxx (e.g zcloud01). 
 	* Click **Submit**.
 	
-3. Make a note of the following. You will need them to access the API later.
+3. Make a note of the following.  You can copy the information to notepad, for example. You will need this information later to access the API.
 	
 	* *client ID* 
 	* *client Secret* 
@@ -96,20 +96,27 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	![alt text](images/keyApplication.png "API Keys")
 
 4. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
+
 	![alt text](images/bankingProduct.png "Choose the default plan")
+	
 	* Click **API Products** from the top menu.
 	* Click **Banking Product** in the list.
 
 5. Subscribe to the Banking API.
+
 	![alt text](images/APISubscription.png "Subscribe")
+	
 	* Click **Subscribe** to the Default Plan.
 	
 	![alt text](images/APISubscription2.png "Banking Product")
+	
 	* Select the App that you have just created before.
 	* Click **Subscribe**.
 	
-6. Modify the *banking-application/public/js/bankingAPI.js* in your banking application.
+6. Modify the *banking-app-xx/public/js/bankingAPI.js* file. You can use notepad, for example.
+
 	![alt text](images/client_id_secret.png "javascript code")
+	
 	* Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
 	* Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
 
@@ -159,22 +166,23 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 ## Part 4 - Push the banking application to your GitHub repository
 
-1. Add the *bankingAPI.js* file you just modified to the current content index:
+1. Add the *bankingAPI.js* file you just modified to the current content index.
 
    `git add public/js/bankingAPI.js`
 
-2. Commit the fresh code you modified to add changes to the local repository:
+2. Commit the modified code to your local repository.
 
    `git commit -m "Update of bankingAPI.js"`
 
-3. Push the code you commited to transfer the last commit to your GitHub repository *ICp-banking-microservices*:
+3. Push the code you commited to your local repository.
 
    `git push`
 
 4. Go back to your online Github repository *banking-app-xx* using the web browser. 
 
 	![alt text](images/commit-push-repo.png "git push")
-	* Check that your code has been updated with commit label *Update of BankingAPI.js*
+	
+	* Check that your code has been updated with the commit label *Update of BankingAPI.js*
 
 ---
 
@@ -184,190 +192,82 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 # Step 2 - Build and deploy a Docker image to OCP
 
-The objective is to build a Docker image for the banking application from your github repository and then deploy it to OCP. 
+When using OpenShift there are a number of different ways you can add an application. We will use the method to Build and deploy from source code contained in a Git repository from a Dockerfile. 
 
-1. Login to the OCP portal, https:console-openshift-console.apps.ocp.linuxone.io, with your assigned credentials. 
+1. Login to the OCP portal.
 
-2. At the login screen, select ldapidp, enter your assigned username and password.
+   From a web browser, enter the URL: https:console-openshift-console.apps.ocp.linuxone.io.
+   
+2. At the login screen, select **ldapidp**.
 
-3. Create a project, name it project-xx, where xx is your assigned ID number.
+![alt text](images/ocp-login1")
 
-4. Click +Add to crate a workload.
+3. Enter your assigned username and password.
 
-5. Selct From Dockerfile.
+![alt text](images/ocp-login2")
 
-6. Enter the URL for your github repo.
+3. Create a project.
 
-7. Change the Container Port to 3000.
+   * Click on **Project** and **Create Project**
 
-8. Click Create.
+![alt text](images/ocp-project1")
 
-## Part 1 - Build the Docker image 
+   * Enter project name: **projectxx**.  *Important:  You must use this exact name with your assigned user number in the project name*
+   * Click on **Create**
+   
+![alt text](images/ocp-project2")
 
-Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using Docker build, users can create an automated build that executes several command-line instructions, step by step.
+As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
 
-1. Create your LinuxONE virtual server to build the Docker image from the LinuxONE Community Cloud following the [virtual Server Deployment Guide](https://github.com/LinuxONE-community-cloud/technical-resources/blob/master/deploy-virtual-server.md): 
+4. Import your Dockerfile from your git repository to be built and deployed.
 
-	1. You will request access to LinuxONE Community Cloud.
-	2. You will make a first time setup (select SLES12SP3).
-	3. You will deploy your LinuxONE virtual server.
-	4. You will log in to your LinuxONE virtual server using SSH.
+   * Click the **From Dockerfile** tile.
+
+![alt text](images/ocp-deploy1")
+
+6. Enter your git repo URL. 
+
+   * **https://github.com/zcloud-01/banking-app-xx.git**
+
+7. Change the Container Port to **3000**.
+
+![alt text](images/ocp-deploy2")
+
+From the name of the repo, the Application Name and deployment Name fields will be automatically populated.
+The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route.
+The Application Name field is used to group multiple deployments together under the same name as part of one overall application.
+
+At the bottom of this page you will see that the checkbox for creating a route to the application is selected. This indicates that the application will be automatically given a public URL for accessing it.
+
+8. Click on **Create**.
+
+This will return you to the Topology view, but this time you will see a representation of the deployment, rather than the options for deploying an application.
+
+![alt text](images/ocp-deploy3")
+
+You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
+
+When the deployment complent, you will see a green check mark indicating that the deployment was successful. 
+
+![alt text](images/ocp-deploy5")
+
+9. Access the application.
+
+You can access the application via its public URL, by clicking on the URL shortcut icon on the visualisation of the deployment.
+
+![alt text](images/ocp-deploy6")
+
+ 
+10. Test your application.
+
+![alt text](images/linux1CC-banking-app-test.png "Banking application")
 	
-	As a result, you have your LinuxONE virtual server (SLES12SP3) created (**YOUR_LINUX_IP** is your LinuxONE virtual server IP Adress)
-	
-	![alt text](images/linux1CC-virtual-server.png "Virtual server")
-	
-2. Once logged in with SSH, clone your fresh source code from your *YOUR_USERNAME/ICp-banking-microservices* Github repository into your LinuxONE virtual server:
-
-	`git clone https://github.com/YOUR_USERNAME/ICp-banking-microservices`
-
-3. Take a look at the *ICp-banking-microservices/banking-application/Dockerfile* file:
-
-	`cat ICp-banking-microservices/banking-application/Dockerfile`
-
-	![alt text](images/dockerfile.png "Dockerfile")
-	* *FROM ibmcom/ibmnode*: This command gathers, from IBM's public Docker repository, a Ubuntu Linux image containing all the basic components to run a Node.js application. It will be used as a basis for our usecase. 
-	* *WORKDIR "/app"*: This command creates a directory inside our image, from which we will inject our specific files.
-	* *COPY package.json /app/*: This command copies our **package.json** file into the working directory inside our image. This file holds information about the app, most importantly the package dependencies it will need.
-	* *RUN cd /app; npm install; npm prune --production*: These commands first move our focus to the working directory, then download and install our app's required dependencies.
-	* *COPY . /app*: This command copies everything left of the app into our working directory inside the Docker image, i.e. our app's source code.
-	* *ENV NODE_ENV production* and *ENV PORT 3000*: These two commands set environment variables. The first one tells our Node.js instance that we run in production mode, and thus don't need development libraries. The other one sets the port 3000 as our main networking port.
-	* *EXPOSE 3000*: This command tells Docker to map the image's port 3000 to the operating system's port 3000. It will gives us a network access to the Docker image and thus the Node.js app.
-	* *CMD ["npm", "start"]*: This last command tells Docker what to do when we launch the image, in our case **npm start**, which will start the Node.js app.
-	
-4. Build your Docker image:
-
-	1. First, change directory to the proper location for our image.
-	`cd ICp-banking-microservices/banking-application`
-	2. Execute the Docker command to create your image.
-	`sudo docker build -t "YOUR_USERNAME-banking-image:latest" .`
-	
-5. As a result, a Docker image is created based on your Dockerfile and your source code pulled from Github :
-
-	`sudo docker images`
-	
-6. Manually start a new container based on your fresh Docker image:
-
-	`sudo docker run -p 3000:3000 YOUR_USERNAME-banking-image`
-	
-	
-4. Launch a web browser and go to **YOUR_LINUX_IP:3000**. The banking application appears.
-    
-	![alt text](images/linux1CC-banking_app.png "Banking application")
-
-5. Test your application.
-
-	![alt text](images/linux1CC-banking-app-test.png "Banking application")
     * Select a customer ID.
     * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
     * The result is displayed in a JSON structure.
 
-## Part 2 - Deploy the Docker image to IBM Cloud Private
 
-In this Code Pattern, an automatic process (Jenkins build) has been set up for you to deploy the Docker image to ICP. 
-
-![alt text](images/devops.png "DevOps")
-
-The Jenkins build processed as follows:
-
-1. Jenkins pulled the source code from a GitHub repository *YOUR_USERNAME/ICp-banking-microservices* like yours.
-2. Jenkins built the Docker image from the Docker file described before. It has been called **cluster68.icp:8500/codepatterns/code-pattern-icp-banking-microservices** and tagged *latest*.
-3. Jenkins connected to ICP and then deployed the Docker image to its Docker image repository.
-	
-> NOTE: If you are practicing this pattern during an event like SHARE or Think, you are authorized to practice this deployment. Otherwise, go to Part 3 below.
->
-> 4. Copy and Paste this URL into your browser address bar : `http://URL_CICD_SERVER/deploy/GITHUB_USERNAME` 
->	
->	* Ask the IBMer managing the lab session for the correct URL_CICD_SERVER.
->	* Replace *GITHUB_USERNAME* with your username.
->
-> 5. Click **Enter**. The deployment is processing: 
-> 	* The process pulls your source code from your GitHub repository *YOUR_USERNAME/ICp-banking-microservices*.
-> 	* The process builds the Docker image from the Docker file described before. It has been called **YOUR_USERNAME-icp-banking-microservices** and tagged *latest*. It will be referred to as **YOUR_IMAGE_NAME**. 
-> 	* The process connects to ICP and then deploys the Docker image to its Docker image repository.
-> 	
-> 6. Wait for the successful completion message of your build: **Deployment successful**
-> ![alt text](images/deployment_githubname.png "Banking application")
-
-As a result, the banking application is now ready to be instantiated from the ICP catalog.
-
-
----
-
-:thumbsup: Congratulations! Your banking application has been packaged into a Docker image using a DevSecOps approach! Ready to use it from IBM Cloud Private?
-
----
-
-# Step 2 - Instantiate the banking microservice from the IBM Cloud Private catalog
-
-The objective is to discover the IBM Cloud Private catalog in order to instantiate a container from your Docker image containing your banking application. In this way, you will be able to test your banking application from ICp.
-
-## Part 1 - Discover the Helm chart from the calalog
-
-1. Subscribe to [IBM Cloud Private in the LinuxONE Community Cloud](https://developer.ibm.com/linuxone)
-![alt text](images/0.520.jpeg "ICP subscription")
-    * Click **Try Cloud Native Platform on the LinuxONE Community Cloud**.
-    * Fill the form and submit.
-    * Activate your account when you will receive the confirmation email.
-
-2. Login to the IBM Cloud Private catalog (the access link is provided in the confirmation email). Fill credentials with yours:
-	
-	![alt text](images/icp_login.png "ICP Login")
-    * Replace the username by your email.
-    * Replace the password by your password.
-
-3. Click the top-right icon from the menu to access the catalog.
-
-	![alt text](images/icp-catalog-users.png "ICP catalog")
-	* Click on **Catalog**.
-
-4. Click on the Helm Chart called **openmplbank - Banking dashboard** to see the overview of this banking microservice.
-
-	> NOTE: If you are practicing this pattern during an IBM event like SHARE or Think, Click on the Helm Chart called **openmplbank-ibm-lab4share**
-
-	![alt text](images/icp-banking-microservices.png "ICP catalog")
-
-
-## Part 2 - Configure and install your banking microservice
-
-1. Check the chart derails and click on configure to create your container.
-
-	![alt text](images/icp-banking-microservices-config.png "ICP catalog")
-	* Click **Configure**.
-
-2. Configure the container:
-
-	![alt text](images/icp-install.png "Banking service configuration")
-	* Fill the release name with *YOUR_USERNAME* (limit of 30 characters).
-	* Select an available target namespace in the list.
-	* The image repository is already filled with the Docker image defined before: **cluster68.icp:8500/codepatterns/code-pattern-icp-banking-microservices**.
-	
-	> NOTE: If you are practicing this pattern during an event like SHARE or Think, fill the image repository with your **YOUR_IMAGE_NAME**.
-
-3. Click the **Install** button. When the process is finished, click **View Helm Release**.
-
-	![alt text](images/icp-view-helm-release.png "Banking service configuration")
-	
-
-## Part 3 - Access your banking microservice
-1. From the Helm release view, the container details are displayed.
-
-	![alt text](images/run-app-icp.png "Banking service configuration")
-	* Click on **Launch** to display the banking microservice.
-
-
-2. Test your application:
-	
-	![alt text](images/icp-banking-app-test.png "Banking application")
-    * Select a customer ID.
-    * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
-    * The result is displayed in a JSON structure.
-    
-3. Your account is available for 24 hours. All your containers will removed when your account will expire.
-
----
-
-:thumbsup: Congratulations! Your banking application has been instantiated from IBM Cloud Private as container. Your banking application succeeded to call banking APIs to call the Mainframe for banking business services.
+:thumbsup: Congratulations! You have suucessfully deployed your banking application to run on the OCP cluster on System Z Linux server. 
 
 ---
 
@@ -379,8 +279,4 @@ This code pattern is licensed under the Apache Software License, Version 2.  Sep
 
 # Links
 
-* [IBM Cloud Private](https://www.ibm.com/cloud/private)
-* [IBM Cloud Private - Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K/product_welcome_cloud_private.html)
-
-[IBM ID]: https://www.ibm.com/account/us-en/signup/register.html
 [API Developer Portal]: https://developer-contest-spbodieusibmcom-prod.developer.us.apiconnect.ibmcloud.com/
