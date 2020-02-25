@@ -101,7 +101,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
    <kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
 	
-   * Click **Subscribe** to the Default Plan.
+   * Click **Subscribe** to subscribe to the *Default Plan*.
 	
    <kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
 	
@@ -109,53 +109,58 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	
    * Click **Subscribe**.
 	
-6. Modify the *banking-app-xx/public/js/bankingAPI.js* file. You can use notepad, for example.
+6. Return to the workstation terminal (or Command prompt)
+
+7. Modify the *banking-app-xx/public/js/bankingAPI.js* file. You can use notepad, for example.
+
+   * Replace **YOUR_CLIENT_ID_HERE** with your client ID value from the IBM API developer portal.
+   
+   * Replace **YOUR_CLIENT_SECRET_HERE** with your client Secret value from the IBM API developer portal.
 
    <kbd>![alt text](images/client_id_secret.png "javascript code")</kbd>
 	
-   * Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
-   * Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
-
+   
 ## Part 3 - Run the banking application with Node.js
 
+1. Go to your banking application folder (if you are not already there)'.
 
-1. Go to your banking application folder:
+   `cd banking-app-xx`
 
-    `cd banking-app-xx`
+2. Install Node.Js package dependencies of the banking application.
 
-2. Install Node.Js package dependencies of the banking application:
-
-    `npm install`
+   `npm install`
     
-	<kbd>![alt text](images/npm-install.png "npm install")</kbd>
+   <kbd>![alt text](images/npm-install.png "npm install")</kbd>
 	
    * As a result, dependencies are installed in your project folder.
 
-3. Run the banking application using:
+3. Start the banking application.
 
-    `node app.js`
+   `node app.js`
     
-	<kbd>![alt text](images/node-app-js.png "node app.js")</kbd>
+   <kbd>![alt text](images/node-app-js.png "node app.js")</kbd>
 	
    * As a result, The banking application is started.
 	
-4. Run your application:
+4. Run your application.
 
-    `Launch a web browser and enter the URL **localhost:3000**. 
+   * Launch a web browser and enter the URL **localhost:3000**. 
     
    The banking application appears.
     
-	<kbd>![alt text](images/banking_app.png "Banking application")</kbd>
+   <kbd>![alt text](images/banking_app.png "Banking application")</kbd>
 
 5. Test your application.
 
-	<kbd>![alt text](images/banking_app_test.png "Banking application")</kbd>
+   <kbd>![alt text](images/banking_app_test.png "Banking application")</kbd>
     
-    * Select a customer ID.
-    * The application accesses banking data from z/OS through API Connect.
-    * The result is displayed in a JSON structure.
+   * Select a customer ID.
     
-6. The banking application works locally. To stop the Node.js server: 
+   * The application accesses banking data from z/OS through API Connect.
+   
+   * The result is displayed in a JSON structure.
+    
+6. You have successfully tested the banking application running locally. Stop the Node.js server. 
    
    Enter **CTRL+C** from the terminal.
 
