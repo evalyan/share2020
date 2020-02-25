@@ -63,7 +63,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
     
 2. Take a look at the imported *banking-app-xx* folder:
 
-   `cd zcloud-01-banking-app-xx`
+   `cd banking-app-xx`
    
    `dir or ls`
    
@@ -88,9 +88,12 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	* For Title: use zcloudxx (e.g zcloud01). 
 	* Click **Submit**.
 	
-	Make a note of the *client ID* and *client Secret*. You will need them to access the API later.
+3. Make a note of the following. You will need them to access the API later.
+	
+	* *client ID* 
+	* *client Secret* 
+	
 	![alt text](images/keyApplication.png "API Keys")
-
 
 4. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
 	![alt text](images/bankingProduct.png "Choose the default plan")
