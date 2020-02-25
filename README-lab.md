@@ -200,22 +200,22 @@ When using OpenShift there are a number of different ways you can add an applica
    
 2. At the login screen, select **ldapidp**.
 
-![alt text](images/ocp-login1")
+![alt text](images/ocp-login1.png)
 
 3. Enter your assigned username and password.
 
-![alt text](images/ocp-login2")
+![alt text](images/ocp-login2.png)
 
 3. Create a project.
 
    * Click on **Project** and **Create Project**
 
-![alt text](images/ocp-project1")
+![alt text](images/ocp-project1.png)
 
    * Enter project name: **projectxx**.  *Important:  You must use this exact name with your assigned user number in the project name*
    * Click on **Create**
    
-![alt text](images/ocp-project2")
+![alt text](images/ocp-project2.png)
 
 As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
 
@@ -223,7 +223,7 @@ As the project is currently empty, no workloads should be found and you will be 
 
    * Click the **From Dockerfile** tile.
 
-![alt text](images/ocp-deploy1")
+![alt text](images/ocp-deploy1.png)
 
 6. Enter your git repo URL. 
 
@@ -231,7 +231,7 @@ As the project is currently empty, no workloads should be found and you will be 
 
 7. Change the Container Port to **3000**.
 
-![alt text](images/ocp-deploy2")
+![alt text](images/ocp-deploy2.png)
 
 From the name of the repo, the Application Name and deployment Name fields will be automatically populated.
 The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route.
@@ -243,19 +243,19 @@ At the bottom of this page you will see that the checkbox for creating a route t
 
 This will return you to the Topology view, but this time you will see a representation of the deployment, rather than the options for deploying an application.
 
-![alt text](images/ocp-deploy3")
+![alt text](images/ocp-deploy3.png)
 
 You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
 
 When the deployment complent, you will see a green check mark indicating that the deployment was successful. 
 
-![alt text](images/ocp-deploy5")
+![alt text](images/ocp-deploy5.png)
 
 9. Access the application.
 
 You can access the application via its public URL, by clicking on the URL shortcut icon on the visualisation of the deployment.
 
-![alt text](images/ocp-deploy6")
+![alt text](images/ocp-deploy6.png)
 
  
 10. Test your application.
