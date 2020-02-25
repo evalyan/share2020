@@ -88,22 +88,22 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    * **client ID** 
    * **client Secret** 
 	
-<kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
+ <kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
 
 4. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
 
-<kbd>![alt text](images/bankingProduct.png "Choose the default plan")</kbd>
+ <kbd>![alt text](images/bankingProduct.png "Choose the default plan")</kbd>
 	
    * Click **API Products** from the top menu.
    * Click **Banking Product** in the list.
 
 5. Subscribe to the Banking API.
 
-<kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
+ <kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
 	
    * Click **Subscribe** to the Default Plan.
 	
-<kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
+ <kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
 	
    * Select the App that you have just created, **myappxx**.
 	
