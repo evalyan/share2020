@@ -1,14 +1,12 @@
 # Deploy a financial microservice using Red Hat OpenShift Container Platform (OCP) on Linux on Z 
 
-In this lab, you will experience how a traditional z/OS transaction can be modernized by creating services (APIs) that can be assessed by a hybrid cloud banking application.   This web application will be deployed using OpenShift and the workload runs on OCP cluster on System Z Linux.
+In this lab, you will learn how a traditional z/OS banking transaction can be modernized and transformed into services (APIs) that can be assessed by a hybrid cloud web application.   This application will be deployed using OCP tools and the workload will run on the OCP cluster residing on System Z Linux.
 
 You will perform the following tasks:
 
-* Use the IBM API Portal to connect to a set of z/OS banking services. 
-* Modify a web application to access the z/OS banking services. 
-* Use node.js to build and test the web application on your laptop. 
-* Build, deploy, and test the web application on OCP.
-* Use OCP to modify the web application and redeploy the changes.
+1. Use the IBM API Portal to subscribe and connect to the set of z/OS banking services for this lab. 
+2. Use your workstation to access your github repository containing the web application locally.  Update the source code with the appropriate credentials required to access the z/OS banking services.  Use node.js to build and test the web application. 
+3. Use the OCP web console to build and deploy the the web application from github.
 
 # Architecture
 
