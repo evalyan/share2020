@@ -1,13 +1,14 @@
 # Deploy a financial microservice using Red Hat OpenShift Container Platform (OCP) on Linux on Z 
 
-In this lab, you will experience how a traditional z/OS transaction can be modernized to create services (APIs) that can be assessed by a hybrid cloud application deployed in Red Hat OCP cluster residing on Linux on Z. 
+In this lab, you will experience how a traditional z/OS transaction can be modernized by creating services (APIs) that can be assessed by a hybrid cloud banking application.   This web application will be deployed using OpenShift and the workload runs on OCP cluster on System Z Linux.
 
 You will perform the following tasks:
 
-* Using the IBM API Portal to connect to a set of z/OS banking APIs created for this lab. 
-* Modify an existing web application to acess the z/OS banking APIs. Using node.js to build and test the web application. 
+* Use the IBM API Portal to connect to a set of z/OS banking services. 
+* Modify a web application to access the z/OS banking services. 
+* Use node.js to build and test the web application on your laptop. 
 * Build, deploy, and test the web application on OCP.
-* Using OCP to modify the web application and redeploy the changes.
+* Use OCP to modify the web application and redeploy the changes.
 
 # Architecture
 
@@ -49,7 +50,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 - [Part 1 - Using the OCP tool to deploy the banking application using a dockerfile].
 - [Part 2 - Access your banking microservice].
-- [Part 3 - Modify the your banking microservice and redeploy].
+- [Part 3 - Modify your banking microservice and redeploy it].
 ---
 
 # Step 1 - Discover and locally run the banking application
@@ -114,28 +115,43 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 1. Go to your banking application folder:
 
-    `cd zcloud-01/banking-app-xx/banking-application`
+    `cd banking-app-xx`
 
-2. Install Node.Js package dependencies of the banking application using : `npm install`
+2. Install Node.Js package dependencies of the banking application:
+
+    `npm install`
+    
 	![alt text](images/npm-install.png "npm install")
-	* As a result, dependencies are installed in your project folder.
-
-3. Run the banking application using : `node app.js` :
-	![alt text](images/node-app-js.png "node app.js")
-	* As a result, The banking application is started.
 	
-4. View your application, Launch a web browser and go to **localhost:3000**. The banking application appears.
+   * As a result, dependencies are installed in your project folder.
+
+3. Run the banking application using:
+
+    `node app.js`
+    
+	![alt text](images/node-app-js.png "node app.js")
+	
+   * As a result, The banking application is started.
+	
+4. Run your application:
+
+    `Launch a web browser and enter the URL **localhost:3000**. 
+    
+   The banking application appears.
     
 	![alt text](images/banking_app.png "Banking application")
 
 5. Test your application.
 
 	![alt text](images/banking_app_test.png "Banking application")
+    
     * Select a customer ID.
-    * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
+    * The application accesses banking data from z/OS through API Connect.
     * The result is displayed in a JSON structure.
     
-6. The banking application locally works. Stop the Node.js server with a **SIGINT (CTRL+C)** from the terminal.
+6. The banking application works locally. To stop the Node.js server: 
+   
+   Enter **CTRL+C** from the terminal.
 
 
 ## Part 4 - Push the banking application to your GitHub repository
