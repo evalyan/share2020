@@ -180,7 +180,7 @@ When using OpenShift there are a number of different ways you can add an applica
 
 1. Login to the OCP portal.
 
-   From a web browser, enter the URL: https:console-openshift-console.apps.ocp.linuxone.io.
+   From a web browser, enter the URL: https://console-openshift-console.apps.ocp.linuxone.io.
    
 2. At the login screen, select **ldapidp**.
 
