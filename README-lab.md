@@ -190,6 +190,12 @@ When using OpenShift there are a number of different ways you can add an applica
 
 ![alt text](images/ocp-login2.png)
 
+3. Switch to the "developer" perspective. 
+
+   * Select the Developer perspective for the project instead of the Adminstrator perspective in the left hand side menu. If necessary click on the hamburger menu icon top left of the web console to expose the left hand side menu.
+
+![alt text](images/ocp-login3.png)
+
 3. Create a project.
 
    * Click on **Project** and **Create Project**
@@ -231,7 +237,7 @@ This will return you to the Topology view, but this time you will see a represen
 
 You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
 
-When the deployment complent, you will see a green check mark indicating that the deployment was successful. 
+When the deployment is complete, you will see a green check mark indicating that the deployment was successful. 
 
 ![alt text](images/ocp-deploy5.png)
 
