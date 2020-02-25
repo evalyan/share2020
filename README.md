@@ -14,7 +14,7 @@ You will perform the following tasks:
 
 This lab accesses a fictitious retail banking system called MPLbank. MPLbank integrates an Account Management System running on IBM Mainframe. On top of this component, an API layer based on z/OS Connect Enterprise Edition and IBM API Connect has been set up to deliver banking APIs. It makes banking services reachable through APIs from all kind of applications. 
 
-![alt text](images/Arch-banking-app-lab.png "Architecture")
+<kbd>![alt text](images/Arch-banking-app-lab.png "Architecture")</kbd>
 
 1. The user deploys a Docker image (banking application based microservice) to the OCP.  
 2. The user configures and runs a container based on this Docker image. Once started, the application calls banking APIs published in API Connect.
