@@ -88,22 +88,22 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    * **client ID** 
    * **client Secret** 
 	
- <kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
+   <kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
 
 4. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
 
- <kbd>![alt text](images/bankingProduct.png "Choose the default plan")</kbd>
+   <kbd>![alt text](images/bankingProduct.png "Choose the default plan")</kbd>
 	
    * Click **API Products** from the top menu.
    * Click **Banking Product** in the list.
 
 5. Subscribe to the Banking API.
 
- <kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
+   <kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
 	
    * Click **Subscribe** to the Default Plan.
 	
- <kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
+   <kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
 	
    * Select the App that you have just created, **myappxx**.
 	
@@ -111,10 +111,10 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	
 6. Modify the *banking-app-xx/public/js/bankingAPI.js* file. You can use notepad, for example.
 
-	<kbd>![alt text](images/client_id_secret.png "javascript code")</kbd>
+   <kbd>![alt text](images/client_id_secret.png "javascript code")</kbd>
 	
-	* Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
-	* Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
+   * Replace *YOUR_CLIENT_ID_HERE* by your client ID value from the IBM API developer portal.
+   * Replace *YOUR_CLIENT_SECRET_HERE* by your client Secret value from the IBM API developer portal.
 
 ## Part 3 - Run the banking application with Node.js
 
