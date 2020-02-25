@@ -126,13 +126,11 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
    `cd banking-app-xx`
 
-2. Install Node.Js package dependencies of the banking application.
+2. Install the Node.Js package dependencies of the banking application.
 
    `npm install`
     
    <kbd>![alt text](images/npm-install.png "npm install")</kbd>
-	
-   * As a result, dependencies are installed in your project folder.
 
 3. Start the banking application.
 
@@ -140,13 +138,9 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
     
    <kbd>![alt text](images/node-app-js.png "node app.js")</kbd>
 	
-   * As a result, The banking application is started.
-	
 4. Run your application.
 
    * Launch a web browser and enter the URL **localhost:3000**. 
-    
-   The banking application appears.
     
    <kbd>![alt text](images/banking_app.png "Banking application")</kbd>
 
@@ -165,7 +159,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    Enter **CTRL+C** from the terminal.
 
 
-## Part 4 - Push the banking application to your GitHub repository
+## Part 4 - Update the banking application repository in GitHub
 
 1. Add the *bankingAPI.js* file you just modified to the current content index.
 
@@ -175,15 +169,17 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
    `git commit -m "Update of bankingAPI.js"`
 
-3. Push the code you commited to your local repository.
+3. Push the code you commited to your GitHub repository.
 
    `git push`
+   
+   * When prompted for a password, enter _______________.
 
-4. Go back to your online Github repository *banking-app-xx* using the web browser. 
+4. Return to your web browser and go to your GitHub repository.
 
-	<kbd>![alt text](images/commit-push-repo.png "git push")</kbd>
+   <kbd>![alt text](images/commit-push-repo.png "git push")</kbd>
 	
-	* Check that your code has been updated with the commit label *Update of BankingAPI.js*
+   * Check that your code in the *bankingAPI.js* file has been updated with the commit label *Update of BankingAPI.js*.
 
 ---
 
@@ -191,87 +187,88 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 ---
 
-# Step 2 - Build and deploy a Docker image to OCP
+# Step 2 - Build and deploy the banking application with OCP
 
 When using OpenShift there are a number of different ways you can add an application. We will use the method to Build and deploy from source code contained in a Git repository from a Dockerfile. 
 
-1. Login to the OCP portal.
+## Part 1 - Build and deploy a docker imager from GitHub  
 
-   From a web browser, enter the URL: https://console-openshift-console.apps.ocp.linuxone.io.
+1. Locate your assigned OCP portal user and password.
+
+1. Login to the OCP portal with your assigned user and password.
+
+   * From a web browser, enter the URL: https://console-openshift-console.apps.ocp.linuxone.io.
    
 2. At the login screen, select **ldapidp**.
 
-<kbd>![alt text](images/ocp-login1.png)</kbd>
+   <kbd>![alt text](images/ocp-login1.png)</kbd>
 
 3. Enter your assigned username and password.
 
-<kbd>![alt text](images/ocp-login2.png)</kbd>
+   <kbd>![alt text](images/ocp-login2.png)</kbd>
 
-3. Switch to the "developer" perspective. 
+4. (If necessary) Select the Developer perspective for the project instead of the Adminstrator perspective 
+  
+   * Select **Developer** in the left hand side menu. 
 
-   * Select the Developer perspective for the project instead of the Adminstrator perspective in the left hand side menu. If necessary click on the hamburger menu icon top left of the web console to expose the left hand side menu.
+   <kbd>![alt text](images/ocp-login3.png)</kbd>
 
-<kbd>![alt text](images/ocp-login3.png)</kbd>
-
-3. Create a project.
+5. Create a project.
 
    * Click on **Project** and **Create Project**
 
-<kbd>![alt text](images/ocp-project1.png)</kbd>
+   <kbd>![alt text](images/ocp-project1.png)</kbd>
 
    * Enter project name: **projectxx**.  *Important:  You must use this exact name with your assigned user number in the project name*
    * Click on **Create**
    
-<kbd>![alt text](images/ocp-project2.png)</kbd>
+   <kbd>![alt text](images/ocp-project2.png)</kbd>
 
 As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
 
-4. Import your Dockerfile from your git repository to be built and deployed.
+6. Import your Dockerfile from your git repository to be built and deployed.
 
    * Click the **From Dockerfile** tile.
 
-<kbd>![alt text](images/ocp-deploy1.png)</<kbd>
+   <kbd>![alt text](images/ocp-deploy1.png)</<kbd>
 
-6. Enter your git repo URL. 
+7. Enter your git repo URL. 
 
    * **https://github.com/zcloud-01/banking-app-xx.git**
 
-7. Change the Container Port to **3000**.
+8. Change the Container Port to **3000**.
 
-<kbd>![alt text](images/ocp-deploy2.png)</kbd>
+   <kbd>![alt text](images/ocp-deploy2.png)</kbd>
 
-From the name of the repo, the Application Name and deployment Name fields will be automatically populated.
-The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route.
-The Application Name field is used to group multiple deployments together under the same name as part of one overall application.
+   From the name of the repo, the Application Name and deployment Name fields will be automatically populated. The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route. The Application Name field is used to group multiple deployments together under the same name as part of one overall application.
 
 At the bottom of this page you will see that the checkbox for creating a route to the application is selected. This indicates that the application will be automatically given a public URL for accessing it.
 
-8. Click on **Create**.
+9. Click on **Create**.
 
-This will return you to the Topology view, but this time you will see a representation of the deployment, rather than the options for deploying an application.
+   This will return you to the Topology view, but this time you will see a representation of the deployment, rather than the options for deploying an application.
 
-<kbd>![alt text](images/ocp-deploy3.png)</kbd>
+   <kbd>![alt text](images/ocp-deploy3.png)</kbd>
 
-You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
+   You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
 
-When the deployment is complete, you will see a green check mark indicating that the deployment was successful. 
+   When the deployment is complete, you will see a green check mark indicating that the deployment was successful. 
 
-<kbd>![alt text](images/ocp-deploy5.png)</kbd>
+   <kbd>![alt text](images/ocp-deploy5.png)</kbd>
 
-9. Access the application.
+10.Access the application.
 
-You can access the application via its public URL, by clicking on the URL shortcut icon on the visualisation of the deployment.
+   You can access the application via its public URL, by clicking on the URL shortcut icon on the visualisation of the deployment.
 
-<kbd>![alt text](images/ocp-deploy6.png)</kbd>
+   <kbd>![alt text](images/ocp-deploy6.png)</kbd>
 
-10. Test your application.
+11.Test your application.
 
-<kbd>![alt text](images/linux1CC-banking-app-test.png "Banking application")</kbd>
+   <kbd>![alt text](images/linux1CC-banking-app-test.png "Banking application")</kbd>
 	
     * Select a customer ID.
     * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
     * The result is displayed in a JSON structure.
-
 
 :thumbsup: Congratulations! You have suucessfully deployed your banking application to run on the OCP cluster on System Z Linux server. 
 
