@@ -40,24 +40,28 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 ## Part 1 - Discover the banking application
 
 1. Locate your assigned ID number: ________________.
+
 2. Locate your assigned git repository: _______________________________.
-2. Launch a terminal and clone your GitHub repository *banking-app-xx* to create a local copy of your banking application, where xx is your assigned ID number:
+
+3. Launch a terminal (or command prompt in Windows).
+
+4. Clone your git repository to create a local copy of your banking application.  Replace xx with your assigned ID number.
 
    `git clone https://github.com/zcloud-01/banking-app-xx`
     
-2. Take a look at the imported *banking-app-xx* folder:
+5. Examine the directory structure of your imported repository.
 
    `cd banking-app-xx`
    
-   `dir or ls`
+   `ls (or dir for Windows)`
    
-	* *app.js*: the application server code.
-	* *public/index.html*: the application client code (banking dashboard).
-	* *public/css*: the application stylesheet.
-	* *public/js*: the JavaScript libraries. 
-	* *public/js/bankingAPI.js* will be modified later to connect to a corebanking system through API calls.
-	* *package.json*: the package dependencies file.
-	* *Dockerfile*: file to build the Docker image. 
+   * *app.js*: the application server code.
+   * *public/index.html*: the application client code (banking dashboard).
+   * *public/css*: the application stylesheet.
+   * *public/js*: the JavaScript libraries. 
+   * *public/js/bankingAPI.js* will be modified later to connect to a corebanking system through API calls.
+   * *package.json*: the package dependencies file.
+   * *Dockerfile*: file to build the Docker image. 
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
