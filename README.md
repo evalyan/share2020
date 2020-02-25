@@ -219,12 +219,15 @@ When using OpenShift there are a number of different ways you can add an applica
 
    <kbd>![alt text](images/ocp-project1.png)</kbd>
 
-   * Enter project name: **projectxx**.  *Important:  You must use this exact name with your assigned user number in the project name*
+   * Enter the name of the project: **projectxx**.  
+    
+    *Important:  You must use this exact name with your assigned user number in the project name.*
+    
    * Click on **Create**
    
    <kbd>![alt text](images/ocp-project2.png)</kbd>
 
-As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
+   As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
 
 6. Import your Dockerfile from your git repository to be built and deployed.
 
