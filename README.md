@@ -270,7 +270,7 @@ When using OpenShift there are a number of different ways you can add an applica
    <kbd>![alt text](images/linux1CC-banking-app-test.png "Banking application")</kbd>
 	
    * Select a customer ID.
-   * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
+   * The application requests banking data from IBM Z through API Connect and z/OS Connect EE.
    * The result is displayed in a JSON structure.
 
 :thumbsup: Congratulations! You have suucessfully deployed your banking application to run on the OCP cluster on System Z Linux server. 
