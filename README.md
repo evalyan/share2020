@@ -65,25 +65,28 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
-1. Start a web browser.
+1. Locate your assigned API Developer Portal account and password. 
 
-2. Go to the API Developer Portal, https://developer-contest-spbodieusibmcom-prod.developer.us.apiconnect.ibmcloud.com/
+2. Start a web browser.
 
+3. Go to the API Developer Portal, https://developer-contest-spbodieusibmcom-prod.developer.us.apiconnect.ibmcloud.com/
 
-
-2. Login to your account.
+4. Login to your assigned account.
 
 3. Create a new application.
-	* Click **Apps** from the menu.
-	* Click **Create new App**.
-	* Fill in all the required fields.
-	* For Title: use zcloudxx (e.g zcloud01). 
-	* Click **Submit**.
+   
+   * Click **Apps** from the menu.
+   
+   * Click **Create new App**.
+   
+   * Fill in all the required fields. For Title: use **myappxx**.  Replace xx with your assigned ID number.
+   
+   * Click **Submit**.
 	
-3. Make a note of the following.  You can copy the information to notepad, for example. You will need this information later to access the API.
+3. Make a note of the following.  For Windows, you can copy this information to notepad or sticky notes, for example. You will need this information later to access the API.
 	
-	* *client ID* 
-	* *client Secret* 
+	* **client ID** 
+	* **client Secret** 
 	
 	<kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
 
