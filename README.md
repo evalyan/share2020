@@ -39,7 +39,9 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 ## Part 1 - Discover the banking application
 
-1. Launch a terminal and clone your GitHub repository *banking-app-xx* to create a local copy of your banking application, where xx is your assigned ID number:
+1. Locate your assigned ID number: ________________.
+2. Locate your assigned git repository: _______________________________.
+2. Launch a terminal and clone your GitHub repository *banking-app-xx* to create a local copy of your banking application, where xx is your assigned ID number:
 
    `git clone https://github.com/zcloud-01/banking-app-xx`
     
