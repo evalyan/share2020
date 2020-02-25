@@ -77,22 +77,22 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 	* *client ID* 
 	* *client Secret* 
 	
-	![alt text](images/keyApplication.png "API Keys")
+	<kbd>![alt text](images/keyApplication.png "API Keys")</kbd>
 
 4. Before working with the banking API, you need to subscribe to it first. Display the list of available API products.
 
-	![alt text](images/bankingProduct.png "Choose the default plan")
+	<kbd>![alt text](images/bankingProduct.png "Choose the default plan")</kbd>
 	
 	* Click **API Products** from the top menu.
 	* Click **Banking Product** in the list.
 
 5. Subscribe to the Banking API.
 
-	![alt text](images/APISubscription.png "Subscribe")
+	<kbd>![alt text](images/APISubscription.png "Subscribe")</kbd>
 	
 	* Click **Subscribe** to the Default Plan.
 	
-	![alt text](images/APISubscription2.png "Banking Product")
+	<kbd>![alt text](images/APISubscription2.png "Banking Product")</kbd>
 	
 	* Select the App that you have just created before.
 	* Click **Subscribe**.
@@ -115,7 +115,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
     `npm install`
     
-	![alt text](images/npm-install.png "npm install")
+	<kbd>![alt text](images/npm-install.png "npm install")</kbd>
 	
    * As a result, dependencies are installed in your project folder.
 
@@ -123,7 +123,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
     `node app.js`
     
-	![alt text](images/node-app-js.png "node app.js")
+	<kbd>![alt text](images/node-app-js.png "node app.js")</kbd>
 	
    * As a result, The banking application is started.
 	
@@ -133,11 +133,11 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
     
    The banking application appears.
     
-	![alt text](images/banking_app.png "Banking application")
+	<kbd>![alt text](images/banking_app.png "Banking application")</kbd>
 
 5. Test your application.
 
-	![alt text](images/banking_app_test.png "Banking application")
+	<kbd>![alt text](images/banking_app_test.png "Banking application")</kbd>
     
     * Select a customer ID.
     * The application accesses banking data from z/OS through API Connect.
@@ -164,7 +164,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 4. Go back to your online Github repository *banking-app-xx* using the web browser. 
 
-	![alt text](images/commit-push-repo.png "git push")
+	<kbd>![alt text](images/commit-push-repo.png "git push")</kbd>
 	
 	* Check that your code has been updated with the commit label *Update of BankingAPI.js*
 
@@ -184,28 +184,28 @@ When using OpenShift there are a number of different ways you can add an applica
    
 2. At the login screen, select **ldapidp**.
 
-![alt text](images/ocp-login1.png)
+<kbd>![alt text](images/ocp-login1.png)</kbd>
 
 3. Enter your assigned username and password.
 
-![alt text](images/ocp-login2.png)
+<kbd>![alt text](images/ocp-login2.png)</kbd>
 
 3. Switch to the "developer" perspective. 
 
    * Select the Developer perspective for the project instead of the Adminstrator perspective in the left hand side menu. If necessary click on the hamburger menu icon top left of the web console to expose the left hand side menu.
 
-![alt text](images/ocp-login3.png)
+<kbd>![alt text](images/ocp-login3.png)</kbd>
 
 3. Create a project.
 
    * Click on **Project** and **Create Project**
 
-![alt text](images/ocp-project1.png)
+<kbd>![alt text](images/ocp-project1.png)</kbd>
 
    * Enter project name: **projectxx**.  *Important:  You must use this exact name with your assigned user number in the project name*
    * Click on **Create**
    
-![alt text](images/ocp-project2.png)
+<kbd>![alt text](images/ocp-project2.png)</kbd>
 
 As the project is currently empty, no workloads should be found and you will be presented with various options for how you can deploy an application.
 
@@ -213,7 +213,7 @@ As the project is currently empty, no workloads should be found and you will be 
 
    * Click the **From Dockerfile** tile.
 
-![alt text](images/ocp-deploy1.png)
+<kbd>![alt text](images/ocp-deploy1.png)</<kbd>
 
 6. Enter your git repo URL. 
 
@@ -221,7 +221,7 @@ As the project is currently empty, no workloads should be found and you will be 
 
 7. Change the Container Port to **3000**.
 
-![alt text](images/ocp-deploy2.png)
+<kbd>![alt text](images/ocp-deploy2.png)</kbd>
 
 From the name of the repo, the Application Name and deployment Name fields will be automatically populated.
 The deployment name is used in OpenShift to identify the resources created when the application is deployed. This will include the internal Service name used by other applications in the same project to communicate with it, as well as being used as part of the default hostname for the application when exposed externally to the cluster via a Route.
@@ -233,24 +233,23 @@ At the bottom of this page you will see that the checkbox for creating a route t
 
 This will return you to the Topology view, but this time you will see a representation of the deployment, rather than the options for deploying an application.
 
-![alt text](images/ocp-deploy3.png)
+<kbd>![alt text](images/ocp-deploy3.png)</kbd>
 
 You may see the colour of the ring in the visualisation change from white, to light blue and then blue. This represents the phases of deployment as the container for the application starts up.
 
 When the deployment is complete, you will see a green check mark indicating that the deployment was successful. 
 
-![alt text](images/ocp-deploy5.png)
+<kbd>![alt text](images/ocp-deploy5.png)</kbd>
 
 9. Access the application.
 
 You can access the application via its public URL, by clicking on the URL shortcut icon on the visualisation of the deployment.
 
-![alt text](images/ocp-deploy6.png)
+<kbd>![alt text](images/ocp-deploy6.png)</kbd>
 
- 
 10. Test your application.
 
-![alt text](images/linux1CC-banking-app-test.png "Banking application")
+<kbd>![alt text](images/linux1CC-banking-app-test.png "Banking application")</kbd>
 	
     * Select a customer ID.
     * Please wait while the application calls banking data from the Mainframe through API Connect and z/OS Connect EE.
