@@ -55,13 +55,13 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    
    `ls (or dir for Windows)`
    
-   * **app.js**: the application server code.
-   * **public/index.html**: the application client code (banking dashboard).
-   * **public/css**: the application stylesheet.
-   * **public/js**: the JavaScript libraries. 
-   * **public/js/bankingAPI.js** will be modified later to connect to a corebanking system through API calls.
-   * **package.json**: the package dependencies file.
-   * **Dockerfile**: file to build the Docker image. 
+   * **app.js**: Application server code
+   * **public/index.html**: Application client code (banking dashboard)
+   * **public/css**: Application stylesheet
+   * **public/js**: JavaScript libraries 
+   * **public/js/bankingAPI.js** Source code that connects to a core banking system through API calls. You will modify this file later. 
+   * **package.json**: Package dependencies file
+   * **Dockerfile**: File to build the Docker image 
 
 ## Part 2 - Subscribe to the banking API through the API Developer Portal
 
