@@ -108,6 +108,8 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
    * Select the App that you have just created, **myappxx**.
 	
    * Click **Subscribe**.
+   
+5. Log out of the API Developer Portal.	
 	
 6. Return to the workstation terminal (or Command prompt)
 
