@@ -169,7 +169,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 2. Commit the modified code to your local repository.
 
-   `git commit -m "Update of bankingAPI.js"`
+   `git commit -m "Update of bankingAPI.js (date)"`
 
 3. Push the code you commited to your GitHub repository.
 
@@ -179,10 +179,12 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
 4. Return to your web browser and go to your GitHub repository.
 
-   <kbd>![alt text](images/commit-push-repo.png "git push")</kbd>
-	
-   * Check that your code in the *bankingAPI.js* file has been updated with the commit label *Update of BankingAPI.js*.
+    `https://github.com/zcloud-01/banking-app-xx`
+    
+5. Verify that your code in the *bankingAPI.js* file has been updated with the commit label *Update of BankingAPI.js*.
 
+   <kbd>![alt text](images/commit-push-repo.png "git push")</kbd>
+	   
 ---
 
 :thumbsup: Congratulations! Your banking application locally works and modifications have been pushed to your GitHub repository! Ready for Red Hat OpenShift Container Platform?
