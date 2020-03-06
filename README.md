@@ -175,7 +175,7 @@ This lab accesses a fictitious retail banking system called MPLbank. MPLbank int
 
    `git push`
    
-   * When prompted for a password, enter _______________.
+   * When prompted for a password, contact the instructor.
 
 4. Return to your web browser and go to your GitHub repository.
 
